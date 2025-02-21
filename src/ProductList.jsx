@@ -254,12 +254,12 @@ function ProductList() {
         e.preventDefault();
         setShowCart(false);
     };
-    // Update handleAddToCart function
     const handleAddToCart = (plant) => {
         dispatch(addItem({
             name: plant.name,
             image: plant.image,
-            cost: plant.cost
+            cost: plant.cost,
+            description: plant.description  // Add description as it might be needed in cart
         }));
         setAddedToCart((prevState) => ({
             ...prevState,
